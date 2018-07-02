@@ -84,7 +84,7 @@ class MainGUI(QtGui.QMainWindow):
         try:
             self.gobar.showMessage(' ')
 #delay, so even if someone tries to spam the button it won't make the modfolk mad.
-            time.sleep(1)
+            time.sleep(0.75)
             SanInput = str(self.inputbox.text()).replace(' ','_')
             req = urllib2.Request("http://www.nationstates.net/cgi-bin/api.cgi?region=" + SanInput + "&q=lastupdate", None, headers)
             html = urllib2.urlopen(req).read()
